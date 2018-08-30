@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".Activities.RegisterActivity">
+
+    <EditText
+        android:id="@+id/username_edittext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/rounded_text_register"
+        android:ems="10"
+        android:hint=" Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selected_photo" />
+
+    <EditText
+        android:id="@+id/email_edittext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_text_register"
+        android:ems="10"
+        android:hint=" email@email.com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/username_edittext"
+        app:layout_constraintStart_toStartOf="@+id/username_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/username_edittext" />
+
+    <EditText
+        android:id="@+id/password_edtiitext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_text_register"
+        android:ems="10"
+        android:hint=" *****"
+        android:inputType="textCapSentences|numberPassword"
+        app:layout_constraintEnd_toEndOf="@+id/email_edittext"
+        app:layout_constraintStart_toStartOf="@+id/email_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/email_edittext" />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="@+id/password_edtiitext"
+        app:layout_constraintStart_toStartOf="@+id/password_edtiitext"
+        app:layout_constraintTop_toBottomOf="@+id/password_edtiitext" />
+
+    <TextView
+        android:id="@+id/have_account_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Already have an account?"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/register_btn"
+        app:layout_constraintStart_toStartOf="@+id/register_btn"
+        app:layout_constraintTop_toBottomOf="@+id/register_btn" />
+
+    <Button
+        android:id="@+id/selected_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_img"
+        android:text="Select photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/select_photo_imgView"
+        android:layout_width="137dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_photo"
+        app:layout_constraintEnd_toEndOf="@+id/selected_photo"
+        app:layout_constraintTop_toTopOf="@+id/selected_photo" />
+
+</android.support.constraint.ConstraintLayout>
